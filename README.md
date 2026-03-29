@@ -24,6 +24,36 @@ Algorithm and Data Structure practice
 ## 計算量（Complexity）の意識
 常に **Time Complexity** と **Space Complexity** を意識し、最良の解法を追求する。
 
+
+# LeetCode 攻略 3箇条
+
+ただ正解（Accepted）を出すだけでなく、トップ企業に評価される「エンジニアの思考」を磨くためのガイドライン。
+
+---
+
+### 1. Java 標準ライブラリの「なぜ」を追求する
+Big Tech の面接では、言語の内部構造に関する質問が頻出する。
+- [ ] **Data Structures:** `ArrayList`, `HashMap`, `HashSet` などの計算量と内部挙動を意識して使い分ける。
+- [ ] **Why this?** 「なぜ LinkedList ではなく ArrayList を選んだのか？」を論理的に説明できる状態で実装する。
+
+### 2. 「計算量（Big O）」を常に言語化する
+「動く」は最低条件。「最速・最小」がプロの条件。
+- [ ] **Time Complexity:** ループの回数を確認し、$O(n)$, $O(n \log n)$, $O(n^2)$ を特定する。
+- [ ] **Space Complexity:** 配列やハッシュマップを新しく作った際、どれだけメモリを消費するかを意識する。
+- [ ] **Optimization:** $O(n^2)$ で解けたら、「$O(n)$ に落とせないか？」を必ず 5 分考える。
+
+### 3. 「読みやすさ（Clean Code）」を徹底する
+コードは「機械」のためではなく「人間」のために書く。
+- [ ] **Naming:** 変数名は `i`, `j` などの一時変数を除き、`currentSum`, `maxWealth` のように意味を持たせる。
+- [ ] **Simplicity:** 無駄に複雑な条件分岐（if文）を避け、誰が読んでも一瞬で理解できるロジックを目指す。
+- [ ] **GitHub Quality:** 自分の GitHub は「未来のチームメンバーへのポートフォリオ」であると意識する。
+
+---
+
+> **"Slow is smooth, and smooth is fast."**
+> （ゆっくりは円滑、円滑は迅速である。—— 基礎を固めることが、結局一番の近道だ。）
+
+
 ## Java's Lessons (Gotchas)
 
 ### 1. Package Declaration
