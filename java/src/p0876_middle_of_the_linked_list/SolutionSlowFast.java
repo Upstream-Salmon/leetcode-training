@@ -24,4 +24,15 @@ public class SolutionSlowFast {
         // fastが終端に達したとき、slowは中央に位置する
         return slow;
     }
+
+    public static void main(String[] args) {
+        // リスト作成: 1 -> 2 -> 3 -> 4 -> 5
+        ListNode head = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))));
+
+        SolutionSlowFast sol = new SolutionSlowFast();
+        ListNode result = sol.middleNode(head);
+
+        // 期待値: 3
+        System.out.println("Middle Node Value: " + result.val);
+    }
 }
