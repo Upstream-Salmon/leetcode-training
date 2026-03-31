@@ -1,0 +1,30 @@
+{
+    // --- 基本設定 ---
+    "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+    "editor.formatOnSave": true, // 保存時に自動整形（Googleスタイル推奨）
+    // --- 補完・インポートの最適化 ---
+    "java.completion.importOrder": [
+        "java",
+        "javax",
+        "com",
+        "org"
+    ],
+    "java.completion.favoriteStaticMembers": [
+        "java.util.Objects.requireNonNull",
+        "java.util.Collections.sort",
+        "java.util.Arrays.sort",
+        "java.util.stream.Collectors.*",
+        "java.lang.Math.*" // Math.maxなどはスタティックインポートで書くのがJava流
+    ],
+    // --- アルゴリズム集中用 ---
+    "java.debug.settings.console": "internalConsole", // デバッグ結果を内部コンソールに出す
+    "java.errors.incompleteClasspath.severity": "ignore", // 単一ファイル実行時のクラスパスエラーを無視
+    // --- タイピング快適化 ---
+    "editor.suggestSelection": "first",
+    "editor.snippetSuggestions": "top",
+    "editor.codeActionsOnSave": {
+        "source.optimizeImports": "explicit" // 不要なimportを自動削除
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active"
+}
