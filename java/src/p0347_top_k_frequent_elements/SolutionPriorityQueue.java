@@ -1,12 +1,12 @@
 package p0347_top_k_frequent_elements;
 
+
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.PriorityQueue;
 
-public class SolutionInit {
+public class SolurionPriorityQueue {
     public int[] topKFrequent(int[] nums, int k) {
         if (nums == null || nums.length == 0)
             return new int[0];
@@ -14,17 +14,23 @@ public class SolutionInit {
         for (int num : nums) {
             countMap.put(num, countMap.getOrDefault(num, 0) + 1);
         }
-        List<Integer> keys = new ArrayList<>(countMap.keySet());
-        keys.sort((a, b) -> Integer.compare(countMap.get(b), countMap.get(a)));
+        PriorityQueue<Integer> pq =
+                new PriorityQueue<>((a, b) -> Integer.compare(countMap.get(a), countMap.get(b)));
+        for (int num : countMap.keySet()) {
+            pq.add(num);
+            if (pq.size() > k) {
+                pq.poll();
+            }
+        }
         int[] result = new int[k];
         for (int i = 0; i < k; i++) {
-            result[i] = keys.get(i);
+            result[i] = pq.poll();
         }
         return result;
     }
 
     public static void main(String[] args) {
-        SolutionInit sol = new SolutionInit();
+        SolurionPriorityQueue sol = new SolurionPriorityQueue();
         int[] result = sol.topKFrequent(new int[] {1, 1, 1, 2, 2, 3}, 2);
         System.out.println(Arrays.toString(result));
     }
