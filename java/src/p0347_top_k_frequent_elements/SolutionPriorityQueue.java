@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
-public class SolurionPriorityQueue {
+public class SolutionPriorityQueue {
     public int[] topKFrequent(int[] nums, int k) {
         if (nums == null || nums.length == 0)
             return new int[0];
@@ -30,7 +30,7 @@ public class SolurionPriorityQueue {
     }
 
     public static void main(String[] args) {
-        SolurionPriorityQueue sol = new SolurionPriorityQueue();
+        SolutionPriorityQueue sol = new SolutionPriorityQueue();
         int[] result = sol.topKFrequent(new int[] {1, 1, 1, 2, 2, 3}, 2);
         System.out.println(Arrays.toString(result));
     }
